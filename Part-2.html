@@ -1,0 +1,98 @@
+
+<script type="text/javascript">
+//User input number
+//user click button
+//Capture the number into a variable
+//break down number from 1 to x
+//each number will be devided by 
+//either 3, 5 and 15
+//return, if % 3 === 0 (fizz)
+//return, if % 5 === 0 (buzz)
+//return, if % 15 === 0 (fizzbuzz)
+//else return the number
+
+$(function() {
+  $('input[type="submit"]').click(function(event) {
+    var num = $('input[type="number"]').val();
+    console.log(num);
+    var fizzBuzzArray = fizzbuzz(num);
+  });
+  
+  
+  
+  
+  
+//User input number
+//user click button
+//Capture the number into a variable
+//break down number from 1 to x
+//each number will be devided by 
+//either 3, 5 and 15
+//return, if % 3 === 0 (fizz)
+//return, if % 5 === 0 (buzz)
+//return, if % 15 === 0 (fizzbuzz)
+//else return the number
+
+$(function() {
+  $('input[type="submit"]').click(function(event) {
+    var num = $('input[type="number"]').val();
+    console.log(num);
+    var fizzBuzzArray = fizzbuzz(num);
+    appendResults(fizzBuzzArray);
+  });
+  
+  function appendResults(array) {
+    array.forEach(function(element) {
+      if (typeof element === "string") {
+        $('.js-results').append(
+          '<div class="fizz-buzz-item ' + element + '">' +
+          '<span>' + element + '</span>' +
+          '</div>'
+          ) 
+          } else {
+          $('.js-results').append(
+          '<div class="fizz-buzz-item">' +
+          '<span>' + element + '</span>' +
+          '</div>'
+            )
+        }
+    });
+  }
+  
+//   $('.js-results').append(
+//     '<div class="fizz-buzz-item">' 
+//     )
+  
+//   <div class="fizz-buzz-item">
+//     <span>1</span>
+//   </div>
+
+  
+  
+  
+  function fizzbuzz(number) {
+    var numbers = [];
+    for(var i = 1; i <= number; i++) {
+      if(i % 3 === 0) {
+        numbers.push("fizz");
+      }
+      else if(i % 5 === 0) {
+        numbers.push("buzz");
+      }
+      else if(i % 15 === 0) {
+        numbers.push("fizzbuzz");
+      }
+      else {
+        numbers.push(i);
+      } 
+    }
+    console.log(numbers);
+    return numbers;
+  };
+  
+  
+  
+  
+});
+
+</script>
