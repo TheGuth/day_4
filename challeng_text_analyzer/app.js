@@ -43,13 +43,29 @@ $(function() {
     var textToAnalyze = $('textarea').val();
     textToAnalyze = textToAnalyze.split('\n');
 
-    var wordCount = textToAnalyze.join(' ').split(' ').length;
+    var wordCount = textToAnalyze.join(' ').split(' '); // .length
+
+    uniqueWords(wordCount);
+
 
 
 
 
   });
 
+function uniqueWords(wordCount) {
+  var newWords = [];
+  for(var i = 0; i < wordCount.length; i++) {
+    if(newWords.includes(wordCount[i])) {
+
+    }
+    else {
+      newWords.push(wordCount[i]);
+    }
+  }
+  console.log(newWords.length);
+  return newWords.length;
+}
 
 
 
