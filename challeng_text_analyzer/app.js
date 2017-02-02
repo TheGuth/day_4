@@ -14,10 +14,10 @@
   // we want that array's length === unique word count.
 
 // function averageWord(word array) 
-  // var total = 0;
-  // iterate over the array
-    // total += word.length
-  // total / word array .length
+//   var total = 0;
+//   iterate over the array
+//     total += word.length
+//   total / word array .length
 
 // function averageSentence(sentence array) 
   // var total = 0;
@@ -45,7 +45,11 @@ $(function() {
 
     var wordCount = textToAnalyze.join(' ').split(' '); // .length
 
-    uniqueWords(wordCount);
+    var WordCountNumber = textToAnalyze.join(' ').split(' ').length;
+
+    var uniqueWordCount = uniqueWords(wordCount);
+
+    var averageWordLengthCount = averageWordLength(wordCount);
 
 
 
@@ -67,6 +71,21 @@ function uniqueWords(wordCount) {
   return newWords.length;
 }
 
+// function averageWord(word array) 
+//   var total = 0;
+//   iterate over the array
+//     total += word.length
+//   total / word array .length
+
+function averageWordLength(words) {
+  var total = 0;
+  words.forEach(function(word) {
+    total += word.length;
+  });
+
+  console.log(total / words.length);
+  return total / words.length;
+}
 
 
 
