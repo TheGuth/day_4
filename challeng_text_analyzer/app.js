@@ -45,13 +45,15 @@ $(function() {
 
     var wordCount = textToAnalyze.join(' ').split(' '); // .length
 
+    var sentencesCount = textToAnalyze.join(' ').split('.');
+
     var WordCountNumber = textToAnalyze.join(' ').split(' ').length;
 
     var uniqueWordCount = uniqueWords(wordCount);
 
     var averageWordLengthCount = averageWordLength(wordCount);
 
-
+    var averageSentenceCount = averageSentence(sentencesCount);
 
 
 
@@ -88,7 +90,20 @@ function averageWordLength(words) {
 }
 
 
+function averageSentence(sentences) {
+  var total = 0;
 
+  // console.log(sentences.length);
+  sentences.forEach(function(sentence) {
+    total += sentence.length;
+  // console.log(sentences.length);
+  });
+
+  console.log(total);
+  console.log(sentences.length);
+  console.log(total / sentences.length);
+  return total / sentences.length;
+}
 
 
 
