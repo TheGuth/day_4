@@ -96,14 +96,14 @@
   function fizzbuzz(number) {
     var numbers = [];
     for(var i = 1; i <= number; i++) {
-      if(i % 3 === 0) {
-        numbers.push("fizz");
+      if(i % 15 === 0) {
+        numbers.push("fizzbuzz");
       }
       else if(i % 5 === 0) {
         numbers.push("buzz");
       }
-      else if(i % 15 === 0) {
-        numbers.push("fizzbuzz");
+      else if(i % 3 === 0) {
+        numbers.push("fizz");
       }
       else {
         numbers.push(i);

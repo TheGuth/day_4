@@ -53,7 +53,7 @@ $(function() {
     // variables holding word array, and sentence array
 
     var wordCount = textToAnalyze.join(' ').split(' '); 
-    var sentencesCount = textToAnalyze.join(' ').split('.');
+    var sentencesCount = textToAnalyze.join(' ').split(/[!?.]/);
 
     // Variables being set to the function calls to answer each
     // analyzing question.
